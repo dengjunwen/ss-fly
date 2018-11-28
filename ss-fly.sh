@@ -8,7 +8,7 @@ plain='\033[0m'
 
 os='ossystem'
 password='flyzy2005.com'
-port='1024'
+port='8081'
 libsodium_file="libsodium-1.0.16"
 libsodium_url="https://github.com/jedisct1/libsodium/releases/download/1.0.16/libsodium-1.0.16.tar.gz"
 
@@ -26,6 +26,7 @@ DIR=`pwd`
 wrong_para_prompt() {
     echo -e "[${red}错误${plain}] 参数输入错误!$1"
 }
+
 
 install_ss() {
         if [[ "$#" -lt 1 ]]
@@ -57,6 +58,8 @@ install_ss() {
         fi
         install
         cleanup
+	install_bbr
+
 }
 
 uninstall_ss() {
@@ -338,7 +341,7 @@ generate_config() {
     "local_port":1080,
     "password":"$1",
     "timeout":300,
-    "method":"aes-256-cfb",
+    "method":"rc4-md5",
     "fast_open":false
 }
 EOF
