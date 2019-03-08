@@ -1,8 +1,16 @@
+
+
+修改过原作者的脚本，直接安装ss+开启bbr    
+git clone https://github.com/dengjunwen/ss-fly
+下载到服务器后运行脚本【可能需要修改权限 chmod u+x ./ss-fly/*】
+ss-fly/ss-fly.sh -i password 1024
+
+
 一键脚本安装shadowsocks/shadowsocksR/V2Ray + 开启bbr
 ---
 
 一键脚本搭建shadowsocks/shadowsocksR/V2Ray + 设置开启自启动 + 升级内核&开启bbr加速。
-
+如需要看原文，请往下看
 ## 教程如何访问
 因为这个脚本，[flyzy小站](https://www.flyzy2005.com)已经被GFW拉入黑名单了，直接DNS污染了，国内无法访问。
 
